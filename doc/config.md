@@ -2,7 +2,7 @@
 
 <pre>
 [printer]
-kinematics: extended_coreXY
+kinematics: extended_corexy
 max_velocity: 500 ; max feedrate 30K
 max_accel: 20000
 max_accel_to_decel: 20000
