@@ -1,5 +1,5 @@
 # Introduction to extended-coreXY
- In the next beta3 release, we will add support/upgrade options for <code>SnakeOil IDEX</code> (using hybrid_coreXY kinematic) and <code>SnakeOil Large Format</code> (using extended_coreXY kinematic).  
+ In the SnakeOilXY beta3 release, we added support/upgrade options for <code>SnakeOilXY IDEX</code> (using hybrid_coreXY kinematic) and <code>SnakeOilXY 4PR</code> (using extended_coreXY kinematic).  
  Extended Corexy(name might be changed when merged into klipper main branch) is a mix of traditional coreXY and hybrid coreXY.
 Before explained what is extended coreXY and it's benefit, let's check the traditional coreXY and 4 motors coreXY (aslo called AWD coreXY or 4WD coreXY) concept and their benefits.
 

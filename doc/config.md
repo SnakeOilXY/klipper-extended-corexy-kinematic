@@ -1,5 +1,9 @@
 # Sample config
 
+- The basic configuration uses 4 motors. A(was X motor on traditional coreXY config), B(was Y motor on traditional coreXY config), C and C1.
+- Motor B and C must have the same <code>position_min</code> and <code>position_max</code>.
+- By default, When home Y axis, the fw will use endstop of C and C1(if available) motor. User can set <code>home_y_axis_with_b_rail</code> to <code>True</code> to enable homing Y axis with B motor endstop.
+
 <pre>
 [printer]
 kinematics: extended_corexy
@@ -9,7 +13,7 @@ max_accel_to_decel: 20000
 max_z_velocity: 10 ; max feedrate 600
 max_z_accel: 1000
 square_corner_velocity: 5
-#home_y_axis_with_b_rail : False
+home_y_axis_with_b_rail : False
 
 [stepper_a]
 step_pin: PG4
