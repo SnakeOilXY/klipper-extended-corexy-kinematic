@@ -24,7 +24,7 @@ Install kinematic file
 cd ~
 git clone https://github.com/SnakeOilXY/klipper-extended-corexy-kinematic
 cd klipper-extended-corexy-kinematic
-sudo ./install.sh
+./install.sh
 </pre>
 
 ## 4. Test data
