@@ -92,10 +92,10 @@ class ExtendedCoreXYKinematics:
                 forcepos[axis] += 1.5 * (position_max - hi.position_endstop)
             # Perform homing
             homing_state.home_rails([rail], forcepos, homepos)
-    def clear_homing_state(self,axes):
-        for i,_ in enumerate(self.limits):
-            if i in axes:
-                self.limits[i] = (1.0, -1.0)
+    def clear_homing_state(self, clear_axes):
+        for axis, axis_name in enumerate("xyz"):
+            if axis_name in clear_axes:
+                self.limits[axis] = (1.0, -1.0)
     def _motor_off(self, print_time):
         # self.limits = [(1.0, -1.0)] * 3
         self.clear_homing_state((0,1,2))
