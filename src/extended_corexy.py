@@ -11,16 +11,15 @@ class ExtendedCoreXYKinematics:
         # Setup axis rails
         self.rails = [stepper.LookupMultiRail(config.getsection('stepper_' + n))
                       for n in 'abzc']
-
-        # rail[0](a)
+        # rail[0](a): add B endstop
         for s in self.rails[1].get_steppers():
             self.rails[0].get_endstops()[0][0].add_stepper(s)
-        # rail[1](b)
+        # rail[1](b): add A and C endstop
         for s in self.rails[0].get_steppers():
             self.rails[1].get_endstops()[0][0].add_stepper(s)
         for s in self.rails[3].get_steppers():
             self.rails[1].get_endstops()[0][0].add_stepper(s)
-        # rail[3](c)
+        # rail[3](c): add A and B endstop
         for s in self.rails[0].get_steppers():
             self.rails[3].get_endstops()[0][0].add_stepper(s)
         for s in self.rails[1].get_steppers():
@@ -64,12 +63,9 @@ class ExtendedCoreXYKinematics:
     def set_position(self, newpos, homing_axes):
         for i, rail in enumerate(self.rails):
             rail.set_position(newpos)
-            if i < len("xyz"):
-                if "xyz"[i] in homing_axes:
-                    self.limits[i] = rail.get_range()
-    # def note_z_not_homed(self):
-    #     # Helper for Safe Z Home
-    #     self.limits[2] = (1.0, -1.0)
+            # rails : abzc, axes : xyz
+            if "xyzy"[i] in homing_axes:
+                self.limits[i] = rail.get_range()
     def home(self, homing_state):
         # Each axis is homed independently and in order
         for axis in homing_state.get_axes():
