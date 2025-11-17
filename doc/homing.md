@@ -1,6 +1,6 @@
 # Homing squence
 
-As addressed in [kinematic page](./kinematic.md), extended-coreXY design an address gantry skew problem of traditional CoreXY, but require special homing squence.
+As addressed in [kinematic page](./kinematic.md), extended-coreXY design can address gantry skew problem of traditional CoreXY, but require special homing squence.
 
 
 ![homing](./homing.jpg)
