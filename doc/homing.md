@@ -7,8 +7,8 @@ As addressed in [kinematic page](./kinematic.md), extended-coreXY design can add
 
 - For example, we have skewed gantry like in fig.1 and we home Y axis with independ endtops C0 and C1 on the front.
 - C0 switch will trigger first
-- To trigger C1, C1 motor with short belt path will pull and force the gantry square.
-- We have square gantry now, but the inner belt path (A and B) will be in unbalance state because they are force pulled by the C1 motor and belt. 
+- To trigger C1 switch, C1 motor with short belt path will pull and force the gantry square.
+- We have square gantry now, but the inner belt path (A and B) will be in unbalanced state because they are force pulled by the C1 motor and belt. 
 
 To fix the unbalenced belt problem we need the following homing squence.
 
