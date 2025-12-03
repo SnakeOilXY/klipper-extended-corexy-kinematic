@@ -49,8 +49,8 @@ class ExtendedCoreXYKinematics:
 
         # get ranges : X from rail 0(A), Y from rail 2(Y), Z from rail 3(Z)
         ranges = [self.rails[0].get_range(),self.rails[1].get_range(),self.rails[2].get_range()]
-        self.axes_min = toolhead.Coord(*[r[0] for r in ranges], e=0.)
-        self.axes_max = toolhead.Coord(*[r[1] for r in ranges], e=0.)
+        self.axes_min = toolhead.Coord([r[0] for r in ranges])
+        self.axes_max = toolhead.Coord([r[1] for r in ranges])
 
         # what rail wil be used to home y axis
         self.home_y_axis_with_b_rail = config.getboolean(
