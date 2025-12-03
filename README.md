@@ -1,6 +1,10 @@
 # klipper-extended-corexy-kinematic
 Klipper module for extended-corexy kinematic support. 
 
+## 0.Change logs
+
+- Update to match klipper code 2025_Nov_7th db7acaa34a367c74c5551ab9649409fdadc7c5ae
+
 ## 1. Introduction
 This kinematic is based on traditional CoreXY and hybrid-CoreXY (aka Markforged kinematic), aiming to improve the performance of large CoreXY-based 3D printers.
 
